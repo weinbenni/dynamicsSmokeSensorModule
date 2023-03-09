@@ -1,0 +1,10 @@
+<launch>
+    	<node name="dynamics_seek_thermal"          pkg="dynamics_seek_thermal"  type="dynamics_seek_thermal" output="screen">
+	</node>
+
+    	<!-- Run RVIZ -->
+    	<arg name="rviz" default="false" />
+    	<group if="$(arg rviz)">
+        	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find dynamics_seek_thermal)/rviz/seek_thermal.rviz" />
+    	</group> 
+</launch>

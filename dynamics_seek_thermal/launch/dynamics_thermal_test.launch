@@ -1,0 +1,19 @@
+<!-- -->
+<launch>
+
+<!--<node name="rqt_reconfigure" pkg ="rqt_reconfigure" type="rqt_reconfigure" respawn="false" output="screen"/>-->
+
+<!--<include file="$(find dynamics_seek_thermal)/src/dynamics_seek_thermal.cpp"/>-->
+
+<node pkg="dynamics_seek_thermal" name="dynamics_seek_thermal"  type="dynamics_seek_thermal" respawn="false" output="screen"/>
+
+<!--<node pkg="dynamics_seek_thermal" name="ConvertBagFile1"  type="ConvertBagFile1.py" output="screen"/>-->
+
+<!--<node pkg="rviz" type="rviz" name="rviz_thermal" args="-d $(find dynamics_thermal_awareness_py)/rviz/seek_thermal.rviz"/>-->
+
+
+
+</launch>
+
+
+

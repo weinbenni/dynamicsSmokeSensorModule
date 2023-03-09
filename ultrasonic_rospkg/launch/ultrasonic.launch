@@ -1,0 +1,3 @@
+<launch>
+  <node name="ultrasonic_publisher" pkg="ultrasonic_rospkg" type="ultrasonic_interrupt.py" output="screen"/>
+</launch>

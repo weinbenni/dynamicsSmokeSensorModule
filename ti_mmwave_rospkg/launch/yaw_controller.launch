@@ -1,0 +1,12 @@
+<launch>
+
+  <arg name="min_angle" default="-45" doc="Minimal (negative) yaw angle from x-axis of sensor"/>
+  <arg name="max_angle" default="45" doc="Maximum (positive) yaw angle from x-axis of sensor"/>
+  <arg name="velocity" default="1.0" doc="Yaw Velocity"/>
+
+  <!-- Activate torque: -->
+  <node pkg="rostopic" type="rostopic" name="rostopic" args="pub /arm_control/controller_manager_node/set_torque std_msgs/Bool 1"/>
+  <!-- Start YawController: -->
+  <node pkg="ti_mmwave_rospkg" type="radar_yaw_controller" name="RadarYawController" args="/arm_control/radar_yaw_velocity_controller/command $(arg min_angle) $(arg max_angle) $(arg velocity)" output="screen" />
+
+</launch>

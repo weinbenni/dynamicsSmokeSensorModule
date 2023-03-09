@@ -1,0 +1,10 @@
+<launch>
+    <!-- Start rviz with a pre-configured AerialMap instance. It will use the fake GPS fix from above. -->
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find us_vis)/rviz/demo.rviz"/>
+
+    <!-- Static fake TF transform -->
+    <node pkg="tf2_ros" type="static_transform_publisher" name="static_tf_us" args="0 0.18 0 0 0 0 US1 US2" />
+    
+    <node pkg="tf2_ros" type="static_transform_publisher" name="static_tf_us2" args="0 0.18 0 1.58 0 0 US1 US3" />.
+    
+</launch>
